@@ -9,6 +9,8 @@ class Hobbits {
 
 public class knowYourVariables {
     public static void main(String[] args) {
+
+        // Be The Compiler - 1:
         Books[] myBooks = new Books[3];
         // The Missing Part - Objects creation
         myBooks[0] = new Books();
@@ -33,12 +35,13 @@ public class knowYourVariables {
             x = x + 1;
         }
 
+        // Be The Compiler - 2:
         Hobbits[] h = new Hobbits[3];
         int z = 0;
 
         // while (z < 4) {
         // Needed change:
-            while (z < 3) {
+        while (z < 3) {
             h[z] = new Hobbits();
 
             h[z].name = "bilbo";
@@ -56,9 +59,29 @@ public class knowYourVariables {
 
             z = z + 1;
         }
+
+
+        // Code Magnets
+        int[] index = new int[4];
+        index[0] = 1;
+        index[1] = 3;
+        index[2] = 0;
+        index[3] = 2;
+
+        String[] islands = new String[4];
+        islands[0] = "Bermuda";
+        islands[1] = "Fiji";
+        islands[2] = "Azores";
+        islands[3] = "Cozumel";
+
+        int ref;
+        int y = 0;
+        while (y < 4) {
+            ref = index[y];
+            y = y + 1;
+
+            System.out.print("island = ");
+            System.out.println(islands[ref]);
+        }
     }
-
 }
-
-
-
