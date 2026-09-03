@@ -1,6 +1,6 @@
 # Head First Java — Ch.4: How Objects behave
 
-**Date:** 2026-0-23
+**Date:** 2026-09-03
 
 ## Key concepts
 
@@ -19,12 +19,16 @@
 ## Exercises
 
 - [x] Sharpen Your Pencil — "What's legal?" (calcArea method calls)
-- [ ] Be the compiler
+- [x] Be the compiler
+- [x] Who Am I?
+- [x] Pool Puzzle
+- [x] Mixed Messages
 
 ## Confused by
 
-- Nothing flagged — comprehension check (5 questions) answered correctly on first pass, with one phrasing refinement on pass-by-value for references.
+- comprehension check (5 questions) answered correctly on first pass, with one phrasing refinement on pass-by-value for references.
+- couldn't totally understand the "Five Minutes Mystery" exercise.
 
 ## Next
 
-do exercises
+ch.5 Extra Strength Methods

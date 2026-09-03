@@ -33,7 +33,6 @@ public class howObjectsBehave {
             while (i > 0) {
                 i = i - 1;
                 result = result + values[i].doStuff(i);
-                ;
             }
             System.out.println("result " + result);
         }
