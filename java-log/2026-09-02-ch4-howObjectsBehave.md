@@ -18,7 +18,8 @@
 
 ## Exercises
 
-- [ ] Sharpen Your Pencil — "What's legal?" (calcArea method calls)
+- [x] Sharpen Your Pencil — "What's legal?" (calcArea method calls)
+- [ ] Be the compiler
 
 ## Confused by
 
