@@ -23,13 +23,14 @@
 - [x] Sharpen Your Pencil — prep code for SimpleStartupGame class
 - [x] Sharpen Your Pencil — "what else should we test?" (test code coverage)
 - [x] Cliffhanger bug — identified root cause (repeated guesses not tracked)
-- [] Be the JVM
-- [] Code Magnets
-- [] Java Cross
-- [] Mixed Messages
+- [x] Be the JVM
+- [x] Code Magnets
+- [x] Java Cross
+- [x] Mixed Messages
 
 ## Confused by
 - writing prep code and test code, my mind goes directly to real code.
+- mistakes in the "Mixed Messages" exercise, probably tracing mistake, but loops logic is well understood.
 
 ## Next
 
