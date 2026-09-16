@@ -22,29 +22,23 @@ function sum ([...arr]) {
 console.log(sum(range(5,2, -1)))
 
 // 2. Reversing An Array
-// function reverseArray(...arr) {
-//     let newArr = []
-//     for(let num of arr) {
-//         newArr.unshift(num)
-//     }
-//     return newArr
-// }
-//
 let arr = [5,20,15,75,6]
-// console.log(reverseArray(...arr))
+
+function reverseArray(arr) {
+    let newArr = []
+    for(let num of arr) {
+        newArr.unshift(num)
+    }
+    return newArr
+}
+console.log(reverseArray(arr))
 
 function reverseArrayInPlace(arr) {
-    let length = arr.length
-    while (length) {
-        let removed = arr.shift()
-        arr = [...arr, removed]
-        console.log(removed, arr)
-        // arr = [arr.unshift(removed), ...arr]
-        length--
-    }
-    for(let num in arr) {
-        // arr.shift(arr[num])
-        // arr.pop(arr[num])
+    for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+        let last = arr.length - 1 - i;
+        let temp = arr[i];
+        arr[i] = arr[last];
+        arr[last] = temp;
     }
     return arr;
 }
