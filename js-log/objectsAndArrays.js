@@ -14,9 +14,20 @@ function sum ([...arr]) {
     let sum = 0
     for(let num of arr) {
         sum += num;
-        // console.log(num)
     }
     return sum;
 }
 
 console.log(sum(range(1, 10, -1)))
+
+// 2. Reversing An Array
+function reverseArray(...arr) {
+    let newArr = []
+    for(let num of arr) {
+        newArr.unshift(num)
+    }
+    return newArr
+}
+
+let arr = [5,20,15,75,6]
+console.log(reverseArray(...arr))
