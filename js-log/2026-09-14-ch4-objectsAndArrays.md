@@ -1,33 +1,33 @@
 # Eloquent JavaScript — Ch.3: Functions
 
-**Date:** 2026-09-01
+**Date:** 2026-09-14
 
 ## Key concepts
 
-- Three ways to define a function: function expression, function declaration (hoisted), arrow function (not hoisted)
-- Scope: global vs local; `let`/`const` are block-scoped, `var` is function-scoped; lexical scoping — inner scopes see outward, not vice versa
-- Shadowing: innermost binding with the same name wins inside its scope
-- Functions are values — can be stored, reassigned, passed around
-- Call stack: tracks return contexts; unterminated recursion → stack overflow (`RangeError: Maximum call stack size exceeded`)
-- Closures: a function = its code + the environment it was created in; each outer call creates a fresh, independent environment
-- `for...in` gives indices/keys; `for...of` gives values — mixing them up silently breaks comparisons
-- Naming a loop variable the same as an outer parameter shadows the parameter and makes it unreachable inside the loop
-- Recursion needs a base case that the recursive step actually converges toward; a guard clause that just dodges a crash can silently return wrong answers instead of fixing the real issue
-- `??` only falls through on `null`/`undefined`, never on other falsy values
-- Default parameters (`x = 1`) only trigger on `undefined`, not `null`/`0`/`""`
-- Pure functions (no side effects, deterministic output) vs side-effecting functions (e.g. `console.log`) — pure ones are easier to reuse and test
+- Arrays: ordered collections of values; zero-based indexing, so the first element is at index `0`
+- Properties: accessed with dot notation (`obj.name`) or bracket notation (`obj[key]`); brackets evaluate the expression first
+- Methods: properties whose values are functions; e.g. `.push()`, `.pop()`, `.toUpperCase()`
+- Stack vs Queue: `push/pop` → LIFO; `push/shift` → FIFO
+- Objects: named collections of properties; properties can be read, added, updated, or deleted
+- `undefined` vs deleted: `obj.x = undefined` keeps the property; `delete obj.x` removes it completely
+- Object utilities: `Object.keys()` returns property names; `Object.assign()` copies/merges properties into an object
+- Arrays are objects: `typeof []` returns `"object"`; arrays are specialized for ordered numeric properties
+- Mutability: objects/arrays can be changed in place; primitives like numbers, strings, and Booleans are immutable
+- Object equality: objects are compared by identity, not content; two separate `{a: 1}` objects are not equal
+- `const` with objects: prevents reassignment of the binding, but does not prevent mutation of the object's contents
+- Property shorthand: `{events, squirrel}` is shorthand for `{events: events, squirrel: squirrel}`
+- `for...of` gives array values directly, while `for...in` gives indices/keys
+- Nested loops: useful for processing objects containing arrays and collecting unique values with `.includes()`
+- Array methods: `.indexOf()`, `.lastIndexOf()`, `.slice()`, and `.concat()` for searching and creating new arrays
+- `.slice(start, end)`: start is inclusive, end is exclusive — same boundary idea as `i < length`
+- Strings also have methods: `.slice()`, `.indexOf()`, `.trim()`, `.padStart()`, `.split()`, `.join()`, `.repeat()`
+- Phi coefficient: practiced translating Boolean combinations into array indices using `index = squirrel * 2 + event`
+- Main takeaway: arrays are best for ordered data, objects for named data, and understanding references/mutability is essential when working with both
+
 
 ## Exercises
 
-- [x] Minimum
-- [x] Recursion (`isEven`, no `%`) — fixed to handle 0/1 base cases plus negative numbers by moving *toward* zero (`+2` for negatives, `-2` for positives) instead of guard-returning `false`
-- [x] Bean Counting (`countBs`, `countChar`) — fixed `for...in` vs `for...of` bug (was comparing string indices instead of characters); fixed parameter/loop-variable name collision (shadowing) that made comparisons always fail
 
 ## Confused by
 
-- Closures inside loops (`let` vs `var`) — needed several passes and a stripped-down example to get the "environment per call, not per line" model straight; still want to re-attempt the box/room analogy after a break
-- Why `??` didn't fire in a buggy `isEven` attempt (`testNum - 2 ?? "ops"`) — clicked once I connected it back to `??` only checking `null`/`undefined`
 
-## Next
-- revisit `let` vs `var` in loops with the "room" analogy
-- chapter 4 :)
