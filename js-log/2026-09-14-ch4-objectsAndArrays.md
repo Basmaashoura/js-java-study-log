@@ -1,6 +1,6 @@
 # Eloquent JavaScript — Ch.3: Functions
 
-**Date:** 2026-09-14
+**Date:** 2026-09-16
 
 ## Key concepts
 
@@ -26,7 +26,10 @@
 
 
 ## Exercises
-
+- [x] The Sum Of Range
+- [x] Reversing An Array
+- [] A List
+- [] Deep Comparison
 
 ## Confused by
 
