@@ -1,4 +1,4 @@
-# Head First Java — Ch.4: How Objects behave
+# Head First Java — Ch.5: Extra-Strength Methods
 
 **Date:** 2026-09-15
 
