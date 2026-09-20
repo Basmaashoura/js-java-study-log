@@ -68,6 +68,18 @@ function prepend(element, list) {
     return newList;
 }
 
+
+function nth(list, n) {
+    let current = list;
+    while (n > 0 && current !== null) {
+        current = current.rest;
+        n--;
+    }
+    return current !== null ? current.value : undefined;
+}
+
 let arr = [1, 2, 3]
-console.log(listToArray(arrayToList(arr)))
-console.log(prepend(4, arrayToList(arr)))
+let list = arrayToList(arr)
+console.log(listToArray(list))
+console.log(prepend(4, list))
+console.log(nth(list, 1))
