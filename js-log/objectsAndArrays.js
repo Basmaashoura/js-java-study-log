@@ -53,5 +53,15 @@ function arrayToList(array) {
     return list;
 }
 
+function listToArray(list) {
+    let current = list;
+    let arr=[]
+    while (current !== null) {
+        arr.push(current.value)
+        current = current.rest;  // step to the next link
+    }
+    return arr
+}
+
 let arr = [1, 2, 3]
-console.log(arrayToList(arr))
+console.log(listToArray(arrayToList(arr)))
