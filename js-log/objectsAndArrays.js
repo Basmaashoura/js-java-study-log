@@ -63,5 +63,11 @@ function listToArray(list) {
     return arr
 }
 
+function prepend(element, list) {
+    let newList = {value: element, rest: list}
+    return newList;
+}
+
 let arr = [1, 2, 3]
 console.log(listToArray(arrayToList(arr)))
+console.log(prepend(4, arrayToList(arr)))
