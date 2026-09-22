@@ -45,41 +45,90 @@
 // console.log(reverseArrayInPlace(arr))
 
 // 3. A List
-function arrayToList(array) {
-    let list = null;
-    for (let i = array.length - 1; i >= 0; i--) {
-        list = {value: array[i], rest: list};
+// function arrayToList(array) {
+//     let list = null;
+//     for (let i = array.length - 1; i >= 0; i--) {
+//         list = {value: array[i], rest: list};
+//     }
+//     return list;
+// }
+//
+// function listToArray(list) {
+//     let current = list;
+//     let arr=[]
+//     while (current !== null) {
+//         arr.push(current.value)
+//         current = current.rest;  // step to the next link
+//     }
+//     return arr
+// }
+//
+// function prepend(element, list) {
+//     let newList = {value: element, rest: list}
+//     return newList;
+// }
+//
+//
+// function nth(list, n) {
+//     let current = list;
+//     while (n > 0 && current !== null) {
+//         current = current.rest;
+//         n--;
+//     }
+//     return current !== null ? current.value : undefined;
+// }
+//
+// let arr = [1, 2, 3]
+// let list = arrayToList(arr)
+// console.log(listToArray(list))
+// console.log(prepend(4, list))
+// console.log(nth(list, 1))
+//
+//
+// var reverseList = function(head = []) {
+//     if(head?.length) {
+//         let counter = Math.floor(head.length / 2);
+//         let right = counter;
+//         let left = counter
+//         for (; counter >= 0; counter--) {
+//             let temp = head[right]
+//             head[right] = head[left];
+//             head[left] = temp;
+//             right -= 1;
+//             left += 1;
+//         }
+//         return head
+//     } else {
+//         return head
+//     }
+// };
+//
+// console.log(reverseList([1,2,3,4,5]));
+
+function deepEqual(right, left) {
+    if (
+        right === null ||
+        left === null ||
+        typeof right !== "object" ||
+        typeof left !== "object" ||
+        Object.keys(right).length !== Object.keys(left).length
+    ) {
+        return false;
     }
-    return list;
-}
 
-function listToArray(list) {
-    let current = list;
-    let arr=[]
-    while (current !== null) {
-        arr.push(current.value)
-        current = current.rest;  // step to the next link
+    for(let i=0; i < Object.keys(left).length; i++) {
+        let [keyL, valueL] = Object.entries(left)[i];
+        let [keyR, valueR]  = Object.entries(right)[i];
+        if(keyL !== keyR || valueL !== valueR)
+            return false
     }
-    return arr
+    return true
+
 }
 
-function prepend(element, list) {
-    let newList = {value: element, rest: list}
-    return newList;
-}
+let obj = {value: 5, id: 5}
+let obj2 = {value: 5, id: 5}
 
-
-function nth(list, n) {
-    let current = list;
-    while (n > 0 && current !== null) {
-        current = current.rest;
-        n--;
-    }
-    return current !== null ? current.value : undefined;
-}
-
-let arr = [1, 2, 3]
-let list = arrayToList(arr)
-console.log(listToArray(list))
-console.log(prepend(4, list))
-console.log(nth(list, 1))
+console.log(deepEqual(obj, obj2))
+console.log(deepEqual(obj, []))
+console.log(deepEqual(obj, null))
