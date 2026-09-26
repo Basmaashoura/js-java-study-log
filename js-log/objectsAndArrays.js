@@ -105,6 +105,7 @@
 //
 // console.log(reverseList([1,2,3,4,5]));
 
+// 4. Deep Comparison
 function deepEqual(right, left) {
     if (
         right === null ||
