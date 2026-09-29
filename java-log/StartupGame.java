@@ -4,7 +4,7 @@ public class StartupGame {
     public static void main(String[] args) {
         int numOfGuesses = 0;
 
-         GameHelper helper = new GameHelper();
+         GameHelper2 helper = new GameHelper2();
 
         simpleStartup theStartup = new simpleStartup();
         int randomNum = (int) (Math.random()*5);
@@ -53,7 +53,7 @@ class simpleStartup {
     }
 }
 
-class GameHelper {
+class GameHelper2 {
     public int getUserInput(String prompt) {
         System.out.print(prompt + ": ");
         Scanner scanner = new Scanner(System.in);
