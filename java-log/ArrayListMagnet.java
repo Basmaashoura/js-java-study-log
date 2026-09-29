@@ -21,18 +21,16 @@ public class ArrayListMagnet {
             a.add("four");
         }
         a.remove(2);
-
         printList(a);
-
-        if (a.contains("two")) {
-            a.add("2.2");
-        }
 
         if (a.indexOf("four") != 4) {
             a.add(4, "4.2");
         }
         printList(a);
-        printList(a);
 
+        if (a.contains("two")) {
+            a.add("2.2");
+        }
+        printList(a);
     }
 }
